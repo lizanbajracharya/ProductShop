@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />helloo
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
