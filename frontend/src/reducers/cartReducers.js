@@ -1,4 +1,4 @@
-import { CART_ADD_ITEM } from '../contants/cartConstants.js'
+import { CART_ADD_ITEM, CART_REMOVE_ITEM } from '../contants/cartConstants.js'
 
 export const cartReducer = (state = { cartItems: [] }, action) => {
   const { type, payload } = action
@@ -21,7 +21,11 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
           cartItems: [...state.cartItems, item],
         }
       }
-
+    case CART_REMOVE_ITEM:
+      return {
+        ...state,
+        cartItems: state.cartItems.filter((x) => x.product !== payload),
+      }
     default:
       return state
   }
