@@ -1,0 +1,19 @@
+{
+  "name": "productshop",
+  "version": "1.0.0",
+  "description": "MERN shopping cart app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizanbajracharya/ProductShop.git"
+  },
+  "author": "Lizan Bajracharya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lizanbajracharya/ProductShop/issues"
+  },
+  "homepage": "https://github.com/lizanbajracharya/ProductShop#readme"
+}
