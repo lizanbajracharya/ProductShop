@@ -13,6 +13,7 @@ import {
   ORDER_LIST_MY_SUCCESS,
   ORDER_LIST_MY_FAIL,
 } from '../contants/orderConstants'
+import { CART_ITEM_RESET } from '../contants/cartConstants'
 
 export const createOrder = (order) => async (dispatch, getState) => {
   try {
@@ -69,6 +70,9 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
     dispatch({
       type: ORDER_DETAILS_SUCCESS,
       payload: data,
+    })
+    dispatch({
+      type: CART_ITEM_RESET,
     })
   } catch (error) {
     dispatch({
