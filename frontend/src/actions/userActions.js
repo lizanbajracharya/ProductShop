@@ -12,9 +12,11 @@ import {
   USER_UPDATE_PROFILE_FAIL,
   USER_UPDATE_PROFILE_REQUEST,
   USER_UPDATE_PROFILE_SUCCESS,
-  USER_DETAILS_RESET,USER_LIST_REQUEST,
+  USER_DETAILS_RESET,
+  USER_LIST_REQUEST,
   USER_LIST_SUCCESS,
   USER_LIST_FAIL,
+  USER_LIST_RESET,
 } from '../contants/userConstants'
 import { ORDER_LIST_MY_RESET } from '../contants/orderConstants'
 import axios from 'axios'
@@ -64,6 +66,9 @@ export const logout = () => (dispatch) => {
   })
   dispatch({
     type: ORDER_LIST_MY_RESET,
+  })
+  dispatch({
+    type: USER_LIST_RESET,
   })
 }
 
